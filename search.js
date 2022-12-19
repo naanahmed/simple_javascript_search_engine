@@ -5,19 +5,18 @@ const search = () => {
     const product_name= document.getElementsByTagName("h2");
 
     for (i=0; i < product_name.length; i++){
-        let match = product[i].getElementsByTagName('h2')[0]
-    }
+        let match = product[i].getElementsByTagName('h2')[0];
 
-    if(match ){
-       let textvalue = match.textContent || match.innerHTML
+        if(match ){
+            let textvalue = match.textContent || match.innerHTML
 
-       if(textvalue.toUpperCase().indexof(searchbox) > -1){
-            product[i].style.display = "";
-       }
-       else{
-            product[i].style.display = "none";
-
-       }
+            if(textvalue.toUpperCase().indexOf(searchbox) > -1){
+                product[i].style.display = "";
+            }
+            else{
+                 product[i].style.display = "none";
+            }
+        }
     }
 }
   
